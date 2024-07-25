@@ -12,16 +12,16 @@ def binary_search(arr, low, high, x):
     if x == arr[mid]:
       return mid
 
-    # ignore left sub-array if "x" is greater than mid element
+    # search the right sub-array if "x" is greater than mid element
     elif x > arr[mid]:
       return binary_search(arr, mid + 1, high, x)
 
-    # ignore right sub-array if x is less than mid element
+    # search the left sub-array if x is less than mid element
     else:
       return binary_search(arr, low, mid - 1, x)
 
   else:
-    #element is not present in the array
+    # element is not present in the array
     return -1
 
 
