@@ -2,17 +2,17 @@
 def binary_search(arr, low, high, x):
   
   # check if the target is within the given range of data
-  if high >= low:
+  if arr[high] >= arr[low]:
 
     # get the mid element "index" using floor division 
     # to be able to handle arrays with odd number of elements
-    mid = (high + low) // 2
+    mid = (low + high) // 2
 
     # return the mid element "index" if it matches "x"
     if x == arr[mid]:
       return mid
 
-    # ignore left sub-array if "x" is greter than mid element
+    # ignore left sub-array if "x" is greater than mid element
     elif x > arr[mid]:
       return binary_search(arr, mid + 1, high, x)
 
