@@ -1,8 +1,8 @@
 ## returns the index of x in an array if present else -1
 def binary_search(arr, low, high, x):
   
-  # check if the target is within the given range of data
-  if arr[high] >= arr[low]:
+  # validate low and high input
+  if high >= low:
 
     # get the mid element "index" using floor division 
     # to be able to handle arrays with odd number of elements
